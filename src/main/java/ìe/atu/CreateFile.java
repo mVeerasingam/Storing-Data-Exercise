@@ -11,8 +11,9 @@ public class CreateFile {
             String content = "Details to write";
             try
             {
-                FileWriter myWriter = new FileWriter(myFile, true);
-                myWriter.write("pog champ");
+                PrintWriter myWriter = new PrintWriter(new FileWriter(myFile, true));
+
+                myWriter.println("Hello World");
                 myWriter.close();
             } catch (IOException e)
             {
